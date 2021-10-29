@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "google",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2021
+    },
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "no-unused-vars": ["error", { "vars": "none", "args": "none", "ignoreRestSiblings": false }],
+        "prettier/prettier": "error"
+    }
+}
