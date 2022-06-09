@@ -42,13 +42,13 @@ module.exports = {
         }
     },
     async getAllUsers(req, res) {
-        const query = req.query.new;
+        const query = req.params.new;
         try {
             const users = query
                 ? User.find().sort({ _id: -1 }).limit(1)
                 : await User.find();
-            const { password, ...others } = users;
-            res.status(200).json(others);
+            //const { password, ...others } = users;
+            res.status(200).json(users);
         } catch (err) {
             res.status(500).json(err);
         }
